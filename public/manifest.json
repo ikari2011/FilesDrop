@@ -1,0 +1,9 @@
+{
+  "name": "FileDrop",
+  "short_name": "FileDrop",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020"
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FileDrop — Transferencia ilimitada</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0b1020">
+<link rel="apple-touch-icon" href="/manifest.json">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1>⚡ FileDrop</h1>
+  <p class="subtitle">Transferencia ilimitada por WiFi</p>
+</header>
+
+<main>
+
+  <section class="card qr-card">
+    <h2>Conectar dispositivo</h2>
+    <div class="qr-wrap">
+      <img id="qr-img" alt="Código QR">
+    </div>
+    <p class="url" id="server-url">—</p>
+    <p class="hint">Escanea con la cámara del móvil</p>
+  </section>
+
+  <section class="card">
+    <h2>Subir archivos</h2>
+    <div id="drop-zone">
+      <input type="file" id="file-input" multiple hidden>
+      <div class="drop-content">
+        <div class="drop-icon">📤</div>
+        <p>Arrastra archivos aquí</p>
+        <button id="browse-btn" class="btn">Seleccionar archivos</button>
+        <p class="hint">Sin límite de tamaño · Imágenes, vídeos, ZIP…</p>
+      </div>
+    </div>
+    <div id="upload-list"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Archivos disponibles</h2>
+      <button id="refresh-btn" class="btn-icon" title="Refrescar">↻</button>
+    </div>
+    <ul id="file-list"></ul>
+  </section>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
